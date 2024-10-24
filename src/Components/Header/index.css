@@ -1,0 +1,88 @@
+.home-nav {
+  height: 10vh;
+  width: 100vw;
+  background-color: #202020;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-right: 20px;
+  margin-bottom: 0px;
+}
+.nav-logo {
+  height: 30px;
+  width: 70px;
+}
+li {
+  list-style-type: none;
+}
+.link-icon {
+  height: 23px;
+  width: 23px;
+  color: white;
+  margin-right: 10px;
+}
+.logout-btn-in-lg {
+  height: 36px;
+  width: 100px;
+  font-size: 15px;
+  border-radius: 6px;
+  background-color: #6366f1;
+  padding: 1px;
+  color: white;
+  border: none;
+}
+
+.links-con {
+  width: 140px;
+
+  display: flex;
+  justify-content: center;
+}
+.link {
+  font-size: 16px;
+  color: white;
+  border: none;
+  text-decoration: none;
+  margin-right: 22px;
+}
+.logout-icon-in-sm {
+  height: 20px;
+  width: 20px;
+  color: white;
+}
+.logout-btn-in-sm {
+  color: white;
+  width: 28px;
+  height: 28px;
+  border: 0px;
+  background-color: #202020;
+}
+.links-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .logout-btn-in-lg {
+    display: none;
+  }
+
+  .links-con {
+    display: none;
+  }
+  .links-icons-con {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .nav-logo {
+    height: 50px;
+    width: 90px;
+  }
+
+  .links-icons-con {
+    display: none;
+  }
+}

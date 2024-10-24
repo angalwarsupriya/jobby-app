@@ -1,0 +1,163 @@
+.login-btn {
+  border-radius: 10px;
+  color: white;
+  background-color: #6366f1;
+  justify-content: center;
+  border: none;
+  margin-top: 20px;
+}
+.error-msg {
+  font-size: 20px;
+  color: red;
+}
+.input {
+  font-size: 20px;
+  display: block;
+  border: 1px solid #cbd5e1;
+  padding-left: 19px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+}
+.login-logo {
+  width: 220px;
+  height: 90px;
+  margin-bottom: 40px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-con {
+  background-color: #2c364c;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding: 3%;
+}
+.lab {
+  color: white;
+  line-height: 10px;
+  margin: 3px;
+}
+.login-page-con {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  font-family: roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*For large and extra large devices*/
+@media (min-width: 992px) {
+  .login-logo {
+    width: 220px;
+    height: 90px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  .input {
+    height: 60px;
+    width: 460px;
+    margin-bottom: 40px;
+  }
+  .login-btn {
+    height: 60px;
+    width: 400px;
+    font-size: 25px;
+  }
+  .lab {
+    font-size: 20px;
+  }
+  .error-msg {
+    font-size: 20px;
+    color: red;
+  }
+}
+/*For midium  devices*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .login-logo {
+    width: 180px;
+    height: 80px;
+    margin-bottom: 40px;
+  }
+  .input {
+    height: 50px;
+    width: 420px;
+    margin-bottom: 28px;
+  }
+  .login-btn {
+    height: 60px;
+    width: 400px;
+    font-size: 20px;
+  }
+  .lab {
+    font-size: 18px;
+  }
+  .error-msg {
+    font-size: 18px;
+    color: red;
+  }
+}
+/*For small devices*/
+@media (width>=576px) and (width<768px) {
+  .login-logo {
+    width: 150px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .input {
+    height: 44px;
+    width: 360px;
+    margin-bottom: 18px;
+  }
+  .login-btn {
+    height: 44px;
+    width: 280px;
+  }
+  .lab {
+    font-size: 12px;
+  }
+  .error-msg {
+    font-size: 15px;
+    color: red;
+  }
+}
+/* For extra small devices*/
+@media (width<576px) {
+  .form-con {
+  }
+  .login-logo {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .input {
+    height: 30px;
+    width: 210px;
+    border-radius: 3px;
+    font-size: 10px;
+  }
+  .login-btn {
+    height: 25px;
+    width: 130px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  .lab {
+    font-size: 10px;
+  }
+  .error-msg {
+    font-size: 10px;
+    color: red;
+  }
+}

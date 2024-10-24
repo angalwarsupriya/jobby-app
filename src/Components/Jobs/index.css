@@ -1,0 +1,407 @@
+/* user profile ui css styles*/
+.user-profile-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.btn-btn {
+  background-color: transparent;
+  border: none;
+}
+.hea {
+  font-size: 20px;
+  color: white;
+
+  margin-bottom: 10px;
+}
+.user-name {
+  color: #4f46e5;
+}
+.profile-bg-con {
+  margin-top: 20px;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 10px;
+}
+.jobs-con {
+  width: 100vw;
+  background-color: #000000;
+  padding: 0px;
+}
+.jobs-main-con {
+  width: 100vw;
+  background-color: #000000;
+  margin: 0px;
+  padding: 0px;
+}
+.jobs-filter-con {
+  background-color: #000000;
+  border: 1px solid black;
+}
+.jobs-displaying-con {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-con-in-lg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 4vh;
+  margin: 20px;
+}
+ul {
+  padding: 0px;
+}
+.search-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  background-color: #000000;
+  border: 1px solid black;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.checkbox-con {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  margin-bottom: 14px;
+}
+.checkbox {
+  margin-right: 10px;
+}
+.label {
+  color: white;
+  font-family: Roboto;
+}
+
+.ul {
+  width: 100%;
+  background-color: #000000;
+  height: 78vh;
+}
+
+.p {
+  color: aliceblue;
+}
+.profile-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.profile-username {
+  font-size: 23px;
+  font-family: Roboto;
+  color: #b6c5ff;
+  font-weight: bold;
+  line-height: 23px;
+  margin: 1;
+}
+.search-icon {
+  font-size: 24px;
+  color: white;
+  background-color: transparent;
+  margin-left: 10px;
+}
+
+.search-bar {
+  height: 33px;
+  width: 320px;
+  color: white;
+  font-size: 15px;
+  border-right: none;
+  border: 1.2px solid white;
+  background-color: transparent;
+  display: block;
+  padding-left: 10px;
+}
+
+.profile-about-user {
+  font-size: 12px;
+  font-family: Roboto;
+  color: #2c364c;
+  margin: 0;
+}
+
+.jobs-failure-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.retry-btn {
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  background-color: #4f46e5;
+  font-size: 12px;
+  font-family: Roboto;
+  margin: 0px;
+}
+
+.job-con {
+  height: 88%;
+  width: 100%;
+  background-color: #000000;
+}
+.failure-hea {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  font-family: sans-serif;
+}
+.failure-p {
+  font-size: 12px;
+  color: white;
+  font-family: sans-serif;
+}
+.jobs-failure-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* for large and extra large , medium */
+@media (width>=768px) {
+  .user-profile-con {
+    height: 30%;
+    width: 90%;
+    padding-bottom: 10px;
+  }
+  .profile-bg-con {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  .profile-img {
+    height: 30%;
+    width: 30%;
+  }
+  .user-name {
+    font-size: 18px;
+    margin: 0px;
+    margin-top: 3px;
+  }
+  .user-bio {
+    font-size: 14px;
+    margin: 0px;
+    margin-top: 5px;
+  }
+} /* for small and extra small */
+@media (width <767px) {
+  .user-profile-con {
+    height: 16vh;
+    width: 90%;
+    padding-bottom: 10px;
+  }
+  .profile-bg-con {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+  }
+  .profile-img {
+    height: 30%;
+    width: 30%;
+  }
+  .user-name {
+    font-size: 17px;
+    margin: 0px;
+    margin-top: 3px;
+  }
+  .user-bio {
+    font-size: 12px;
+    margin: 0px;
+    margin-top: 5px;
+  }
+}
+
+/*For large and extra large devices*/
+@media (min-width: 992px) {
+  .jobs-filter-con {
+    height: 90vh;
+    width: 20%;
+    padding-left: 10px;
+    padding: 10px;
+  }
+  .jobs-main-con {
+    display: flex;
+    align-items: center;
+  }
+  .jobs-displaying-con {
+    height: 90vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .search-con-in-sm {
+    display: none;
+  }
+
+  .checkbox {
+    height: 22px;
+    width: 22px;
+  }
+  .label {
+    font-size: 16px;
+  }
+  .con-con {
+    width: 80vw;
+  }
+  .ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+  }
+  .no-jobs-img {
+    width: 60%;
+  }
+  .failure-img {
+    width: 70%;
+  }
+}
+/*For midium  devices*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .jobs-filter-con {
+    height: 90vh;
+    width: 20%;
+    padding-left: 10px;
+  }
+  .jobs-main-con {
+    display: flex;
+    align-items: center;
+  }
+  .jobs-displaying-con {
+    height: 85vh;
+    width: 80vw;
+  }
+  .search-con-in-sm {
+    display: none;
+  }
+  .checkbox {
+    height: 12px;
+    width: 12px;
+  }
+  .label {
+    font-size: 15px;
+    color: white;
+  }
+
+  .con-con {
+    width: 80vw;
+  }
+  .ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+  }
+  .no-jobs-img {
+    width: 70%;
+  }
+  .failure-img {
+    width: 70%;
+  }
+}
+/*For small devices*/
+@media (width>=576px) and (width<768px) {
+  .jobs-filter-con {
+    width: 100vw;
+    padding-left: 30px;
+  }
+  .jobs-main-con {
+    display: flex;
+    flex-direction: column;
+  }
+  .jobs-displaying-con {
+    height: 60vh;
+    width: 100vw;
+  }
+  .checkbox {
+    height: 11px;
+    width: 11px;
+  }
+  .label {
+    font-size: 13px;
+  }
+  .con-con {
+    height: 60vh;
+    width: 100vw;
+  }
+  .search-con-in-lg {
+    display: none;
+  }
+  .ul {
+    overflow-y: scroll;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .failure-img {
+    width: 60%;
+    height: 40%;
+  }
+  .no-jobs-img {
+    width: 60%;
+    height: 40%;
+  }
+  .jobs-failure-con {
+    min-height: 50vh;
+  }
+}
+/* For extra small devices*/
+@media (width<576px) {
+  .jobs-filter-con {
+    width: 100vw;
+    padding-left: 30px;
+    background-color: #000000;
+  }
+  .jobs-main-con {
+    display: flex;
+    flex-direction: column;
+  }
+  .jobs-displaying-con {
+    width: 100vw;
+  }
+
+  .checkbox {
+    height: 15px;
+    width: 14px;
+  }
+  .label {
+    font-size: 14px;
+  }
+  .con-con {
+    width: 100vw;
+  }
+  .search-con-in-lg {
+    display: none;
+  }
+  .ul {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-y: scroll;
+  }
+  .failure-img {
+    width: 60%;
+    height: 40%;
+  }
+  .no-jobs-img {
+    width: 60%;
+    height: 40%;
+  }
+  .jobs-failure-con {
+    min-height: 50vh;
+  }
+}
