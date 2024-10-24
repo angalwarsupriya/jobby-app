@@ -14,7 +14,6 @@ class SpecificJobItem extends Component {
   componentDidMount() {
     this.getjobDetails()
   }
-
   getjobDetails = async () => {
     this.setState({pageStatus: 'inprogress'})
     const {match} = this.props
@@ -61,7 +60,7 @@ class SpecificJobItem extends Component {
   }
 
   displaySuccessView = () => {
-    const {obDetails, similarJobs} = this.state
+    const {jobDetails, similarJobs} = this.state
 
     return (
       <div className="specific-job-con">
