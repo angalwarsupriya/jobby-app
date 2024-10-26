@@ -1,4 +1,3 @@
-import './index.css'
 import {IoLocationOutline} from 'react-icons/io5'
 import {BsBriefcaseFill} from 'react-icons/bs'
 import {FaStar, FaShareSquare} from 'react-icons/fa'
@@ -7,6 +6,7 @@ import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import {Component} from 'react'
 import Header from '../Header'
+import './index.css'
 
 class SpecificJobItem extends Component {
   state = {pageStatus: 'initial', jobDetails: [], similarJobs: []}
@@ -14,6 +14,7 @@ class SpecificJobItem extends Component {
   componentDidMount() {
     this.getjobDetails()
   }
+
   getjobDetails = async () => {
     this.setState({pageStatus: 'inprogress'})
     const {match} = this.props

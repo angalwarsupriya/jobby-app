@@ -29,6 +29,7 @@
 .jobs-con {
   width: 100vw;
   background-color: #000000;
+
   padding: 0px;
 }
 .jobs-main-con {
@@ -54,7 +55,7 @@
   height: 4vh;
   margin: 20px;
 }
-ul {
+.filter-ul {
   padding: 0px;
 }
 .search-con {
@@ -83,6 +84,8 @@ ul {
 }
 
 .ul {
+  display: flex;
+  align-items: center;
   width: 100%;
   background-color: #000000;
   height: 78vh;
@@ -168,8 +171,23 @@ ul {
   justify-content: center;
   align-items: center;
 }
-/* for large and extra large , medium */
-@media (width>=768px) {
+
+/* medium */
+
+@media (width<992px) and (width>=768px) {
+  .jobs-filter-con {
+    height: 90vh;
+    width: 20%;
+    padding-left: 10px;
+  }
+  .jobs-main-con {
+    display: flex;
+    align-items: center;
+  }
+  .jobs-displaying-con {
+    height: 85vh;
+    width: 80vw;
+  }
   .user-profile-con {
     height: 30%;
     width: 90%;
@@ -194,36 +212,37 @@ ul {
     margin: 0px;
     margin-top: 5px;
   }
-} /* for small and extra small */
-@media (width <767px) {
-  .user-profile-con {
-    height: 16vh;
-    width: 90%;
-    padding-bottom: 10px;
+  .search-con-in-sm {
+    display: none;
   }
-  .profile-bg-con {
-    height: 100%;
-    width: 100%;
-    padding: 15px;
+  .checkbox {
+    height: 12px;
+    width: 12px;
   }
-  .profile-img {
-    height: 30%;
-    width: 30%;
+  .label {
+    font-size: 15px;
+    color: white;
   }
-  .user-name {
-    font-size: 17px;
-    margin: 0px;
-    margin-top: 3px;
+
+  .con-con {
+    width: 80vw;
   }
-  .user-bio {
-    font-size: 12px;
-    margin: 0px;
-    margin-top: 5px;
+  .ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    background-color: #000000;
+  }
+  .no-jobs-img {
+    width: 70%;
+  }
+  .failure-img {
+    width: 70%;
   }
 }
 
-/*For large and extra large devices*/
-@media (min-width: 992px) {
+/*For large devices*/
+@media (min-width: 992px) and (max-width: 1199px) {
   .jobs-filter-con {
     height: 90vh;
     width: 20%;
@@ -245,11 +264,11 @@ ul {
   }
 
   .checkbox {
-    height: 22px;
-    width: 22px;
+    height: 16px;
+    width: 16px;
   }
   .label {
-    font-size: 16px;
+    font-size: 12px;
   }
   .con-con {
     width: 80vw;
@@ -259,6 +278,10 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
+    background-color: #000000;
+  }
+  .hea {
+    font-size: 16px;
   }
   .no-jobs-img {
     width: 60%;
@@ -266,34 +289,54 @@ ul {
   .failure-img {
     width: 70%;
   }
+  .profile-bg-con {
+    height: 100px;
+  }
+  .profile-img {
+    height: 30%;
+    width: 30%;
+  }
+  .user-name {
+    font-size: 15px;
+    margin-left: 2px;
+    margin-top: 2px;
+  }
+  .user-bio {
+    font-size: 12px;
+    margin-left: 2px;
+    margin-top: 3px;
+  }
 }
-/*For midium  devices*/
-@media (min-width: 768px) and (max-width: 991px) {
+/* and extra large devices*/
+
+@media (width>=1200px) {
   .jobs-filter-con {
     height: 90vh;
     width: 20%;
     padding-left: 10px;
+    padding: 10px;
   }
   .jobs-main-con {
     display: flex;
     align-items: center;
   }
   .jobs-displaying-con {
-    height: 85vh;
+    height: 90vh;
     width: 80vw;
+    display: flex;
+    flex-direction: column;
   }
   .search-con-in-sm {
     display: none;
   }
+
   .checkbox {
-    height: 12px;
-    width: 12px;
+    height: 25px;
+    width: 25px;
   }
   .label {
-    font-size: 15px;
-    color: white;
+    font-size: 20px;
   }
-
   .con-con {
     width: 80vw;
   }
@@ -302,12 +345,37 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: scroll;
+    background-color: #000000;
+  }
+  .hea {
+    font-size: 26px;
+  }
+  .filter-ul {
+    padding-left: 10%;
   }
   .no-jobs-img {
-    width: 70%;
+    width: 60%;
   }
   .failure-img {
     width: 70%;
+  }
+  .profile-bg-con {
+    height: 150px;
+    padding: 10px;
+  }
+  .profile-img {
+    height: 35%;
+    width: 30%;
+  }
+  .user-name {
+    font-size: 20px;
+    margin-left: 2px;
+    margin-top: 2px;
+  }
+  .user-bio {
+    font-size: 17px;
+    margin-left: 2px;
+    margin-top: 3px;
   }
 }
 /*For small devices*/
@@ -339,11 +407,10 @@ ul {
     display: none;
   }
   .ul {
-    overflow-y: scroll;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
   }
   .failure-img {
     width: 60%;
@@ -355,6 +422,30 @@ ul {
   }
   .jobs-failure-con {
     min-height: 50vh;
+  }
+  .user-profile-con {
+    height: 16vh;
+    width: 90%;
+    padding-bottom: 10px;
+  }
+  .profile-bg-con {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+  }
+  .profile-img {
+    height: 30%;
+    width: 30%;
+  }
+  .user-name {
+    font-size: 17px;
+    margin: 0px;
+    margin-top: 3px;
+  }
+  .user-bio {
+    font-size: 12px;
+    margin: 0px;
+    margin-top: 5px;
   }
 }
 /* For extra small devices*/
@@ -386,12 +477,11 @@ ul {
     display: none;
   }
   .ul {
-    background-color: #000000;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     overflow-y: scroll;
+    background-color: #000000;
   }
   .failure-img {
     width: 60%;
@@ -403,5 +493,29 @@ ul {
   }
   .jobs-failure-con {
     min-height: 50vh;
+  }
+  .user-profile-con {
+    height: 16vh;
+    width: 90%;
+    padding-bottom: 10px;
+  }
+  .profile-bg-con {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+  }
+  .profile-img {
+    height: 30%;
+    width: 30%;
+  }
+  .user-name {
+    font-size: 17px;
+    margin: 0px;
+    margin-top: 3px;
+  }
+  .user-bio {
+    font-size: 12px;
+    margin: 0px;
+    margin-top: 5px;
   }
 }

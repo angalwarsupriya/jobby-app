@@ -1,12 +1,11 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
-import './index.css'
 import Cookies from 'js-cookie'
 import {BsSearch} from 'react-icons/bs'
 import Header from '../Header'
 import JobCard from '../JobCard'
+import './index.css'
 
-console
 const employmentTypesList = [
   {
     label: 'Full Time',
@@ -51,6 +50,7 @@ const statusList = {
   failure: 'FAILURE',
   nojobsfound: 'NO JOBS FOUND',
 }
+
 class Jobs extends Component {
   // STATE INITIALZATION
   state = {
@@ -61,6 +61,12 @@ class Jobs extends Component {
     pageStatus: statusList.initial,
     profileStatus: statusList.initial,
     profileDetailsList: {},
+  }
+
+  // COMPONENT DID MOUND METHOD IN LIFE CYCLE
+  componentDidMount() {
+    this.fetchingData()
+    this.fetchingProfileData()
   }
 
   // FETCHING JOBS DATA FUNCTION
@@ -135,12 +141,6 @@ class Jobs extends Component {
     }
   }
 
-  // COMPONENT DID MOUND METHOD IN LIFE CYCLE
-  componentDidMount() {
-    this.fetchingData()
-    this.fetchingProfileData()
-  }
-
   // STATE UPDATING FUNCTION WHILE CLICKING ON INPUTS
   onSearchInput = event => {
     this.setState({search: event.target.value})
@@ -148,7 +148,6 @@ class Jobs extends Component {
 
   onClickingOnchechbox = event => {
     const {employmentTypeList} = this.state
-
     const isIn = employmentTypeList.includes(event.target.id)
 
     if (isIn) {
@@ -170,13 +169,13 @@ class Jobs extends Component {
     this.setState({minimumPackage: event.target.id}, this.fetchingData)
   }
 
-  getSearchingResult = event => {
+  getSearchingResult = () => {
     this.fetchingData()
   }
 
   // DISPLAY JOBS WHEN PAGESTATUS IS SUCCESS
   displayJobs = () => {
-    const {search, resultsList} = this.state
+    const {resultsList} = this.state
     return (
       <div className="con-con">
         <ul className="ul">
@@ -217,7 +216,7 @@ class Jobs extends Component {
       <p className="failure-p">
         We cannot seem to find the page you are looking for
       </p>
-      <button onClick={this.fetchingData} className="retry-btn">
+      <button onClick={this.fetchingData} type="button" className="retry-btn">
         Retry
       </button>
     </div>
@@ -232,7 +231,11 @@ class Jobs extends Component {
 
   displayProfileFailreView = () => (
     <div>
-      <button onClick={this.fetchingProfileData} className="retry-btn">
+      <button
+        onClick={this.fetchingProfileData}
+        type="button"
+        className="retry-btn"
+      >
         Retry
       </button>
     </div>
@@ -240,7 +243,7 @@ class Jobs extends Component {
 
   // DISPLAY PROFILE SUCCESS VIEW
   displayProfile = () => {
-    const {profileStatus, profileDetailsList} = this.state
+    const {profileDetailsList} = this.state
 
     return (
       <div className="profile-bg-con">
@@ -262,18 +265,14 @@ class Jobs extends Component {
     switch (pageStatus) {
       case statusList.inprogress:
         return this.displayLoading()
-        break
       case statusList.success:
         return this.displayJobs()
-        break
       case statusList.failure:
         return this.displayFailureJobView()
-        break
       case statusList.nojobsfound:
         return this.noJobsFoundView()
-        break
       default:
-        null
+        return null
     }
   }
 
@@ -284,22 +283,18 @@ class Jobs extends Component {
     switch (profileStatus) {
       case statusList.inprogress:
         return this.displayLoading()
-        break
       case statusList.success:
         return this.displayProfile()
-        break
       case statusList.failure:
-        return this.displayProfileFailreView()
-        break
+        return this.displayBasedOnStatus()
       default:
-        null
+        return null
     }
   }
 
   // RENDER METHOD
   render() {
     const {search} = this.state
-    const {pageStatus} = this.state
     // RETURN METHOD FOR DISPLAYING UI
     return (
       <div className="jobs-con">
@@ -313,7 +308,12 @@ class Jobs extends Component {
             placeholder="search"
             onChange={this.onSearchInput}
           />
-          <button className="btn-btn" type="button" data-testid="searchButton">
+          <button
+            className="btn-btn"
+            type="button"
+            data-testid="searchButton"
+            aria-label="search"
+          >
             <BsSearch
               className="search-icon"
               onClick={this.getSearchingResult}
@@ -327,7 +327,7 @@ class Jobs extends Component {
               {this.displayProfileViewBasedOnprofileState()}
             </div>
             <div>
-              <ul>
+              <ul className="filter-ul">
                 <h1 className="hea">Type of Employment</h1>
                 {employmentTypesList.map(item => (
                   <li className="checkbox-con" key={item.employmentTypeId}>
@@ -345,7 +345,7 @@ class Jobs extends Component {
               </ul>
             </div>
             <hr />
-            <ul>
+            <ul className="filter-ul">
               <h1 className="hea">Salary Range</h1>
               {salaryRangesList.map(item => (
                 <li className="checkbox-con" key={item.salaryRangeId}>

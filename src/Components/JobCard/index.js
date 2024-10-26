@@ -1,11 +1,11 @@
 import {withRouter} from 'react-router-dom'
 import {IoLocationOutline} from 'react-icons/io5'
 import {BsBriefcaseFill} from 'react-icons/bs'
-import {FaStar, FaShareSquare} from 'react-icons/fa'
+import {FaStar} from 'react-icons/fa'
 import './index.css'
 
 const JobCard = props => {
-  const {eachJob, showingSpecificJobPage} = props
+  const {eachJob} = props
   const clickingOnJobCard = () => {
     const {history} = props
     history.replace(`/jobs/${eachJob.id}`)
@@ -21,7 +21,6 @@ const JobCard = props => {
               src={eachJob.company_logo_url}
             />
           </div>
-
           <div className="job-card-name-rating-con">
             <div>
               <h1 className="job-card-title">{eachJob.title}</h1>
