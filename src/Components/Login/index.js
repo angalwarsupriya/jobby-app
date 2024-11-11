@@ -28,8 +28,8 @@ class Login extends Component {
       body: JSON.stringify(sendingDetails),
     }
     const fetching = await fetch(Url, options)
-
     const waitingForData = await fetching.json()
+    console.log(waitingForData)
     const responseStatus = fetching.ok
     if (responseStatus) {
       const {history} = this.props
@@ -66,7 +66,7 @@ class Login extends Component {
                 type="text"
                 value={username}
                 className="input"
-                placeholder="Username"
+                placeholder="Use: rahul"
                 onChange={this.onChangeName}
               />
             </div>
@@ -79,7 +79,7 @@ class Login extends Component {
                 type="text"
                 value={password}
                 className="input"
-                placeholder="Password"
+                placeholder="Use: rahul@2021"
                 onChange={this.onChangePassword}
               />
             </div>

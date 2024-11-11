@@ -281,7 +281,7 @@
     background-color: #000000;
   }
   .hea {
-    font-size: 16px;
+    font-size: 12px;
   }
   .no-jobs-img {
     width: 60%;
@@ -331,11 +331,11 @@
   }
 
   .checkbox {
-    height: 25px;
-    width: 25px;
+    height: 18px;
+    width: 18px;
   }
   .label {
-    font-size: 20px;
+    font-size: 17px;
   }
   .con-con {
     width: 80vw;
@@ -348,7 +348,7 @@
     background-color: #000000;
   }
   .hea {
-    font-size: 26px;
+    font-size: 16px;
   }
   .filter-ul {
     padding-left: 10%;

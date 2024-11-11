@@ -130,7 +130,7 @@ class Jobs extends Component {
     }
     const getProfileResponse = await fetch(getProfileUrl, getProfileOptions)
     const profilesDetails = await getProfileResponse.json()
-
+    console.log(profilesDetails)
     if (getProfileResponse.ok === true) {
       this.setState({
         profileDetailsList: profilesDetails.profile_details,
@@ -252,7 +252,7 @@ class Jobs extends Component {
           className="profile-img"
           src={profileDetailsList.profile_image_url}
         />
-        <h1 className="user-name">{profileDetailsList.name}</h1>
+        <h2 className="user-name">{profileDetailsList.name}</h2>
         <p className="user-bio">{profileDetailsList.short_bio}</p>
       </div>
     )
@@ -328,7 +328,7 @@ class Jobs extends Component {
             </div>
             <div>
               <ul className="filter-ul">
-                <h1 className="hea">Type of Employment</h1>
+                <h3 className="hea">Type of Employment</h3>
                 {employmentTypesList.map(item => (
                   <li className="checkbox-con" key={item.employmentTypeId}>
                     <input
@@ -346,7 +346,7 @@ class Jobs extends Component {
             </div>
             <hr />
             <ul className="filter-ul">
-              <h1 className="hea">Salary Range</h1>
+              <h3 className="hea">Salary Range</h3>
               {salaryRangesList.map(item => (
                 <li className="checkbox-con" key={item.salaryRangeId}>
                   <input
